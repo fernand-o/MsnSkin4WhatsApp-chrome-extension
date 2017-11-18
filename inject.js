@@ -19,6 +19,8 @@ function removeOriginalContent() {
 function injectIframe() {
   let iframe = document.createElement('iframe')
   iframe.id = 'msn-frame';
+  iframe.width = 800;
+  iframe.height = 800;
   iframe.src = chrome.runtime.getURL('/dist/index.html');
   document.getElementById('app').appendChild(iframe);
 }
